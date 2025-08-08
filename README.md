@@ -43,6 +43,9 @@
     
     Captures exceptions during log generation and returns a `500` status code on failure
     
+## Result
+<img width="461" height="207" alt="image" src="https://github.com/user-attachments/assets/f952cf66-0bf5-4845-ba6a-1bbb76ea0706" />
+
 
 ## Motivation / Impact
 
