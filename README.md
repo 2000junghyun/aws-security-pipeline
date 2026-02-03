@@ -56,11 +56,16 @@ aws-security-pipeline/
 
 ## How It Works
 
-- **Event Ingestion**: CloudTrail, S3 이벤트, CloudWatch Alarm/SNS 등 다양한 이벤트 소스가 입력으로 입력됨.
-- **Classification (aws-classifier)**: 이벤트의 핵심 필드(예: IP, 사용자, 이벤트 타입)를 기반으로 위협 여부/유형을 분류함.
-- **Response (aws-responder)**: 위협으로 판정되면 대응 모듈이 실행되어 접근 차단/권한 제한/리소스 격리 같은 조치를 수행함.
-- **Notify & Log**: 운영 가시성을 위해 `aws-notifier`는 알림을 전파하고, `aws-logger`는 공통 포맷으로 로그를 생성함.
-- **Operational Resilience**: 비동기 처리와 실패 재처리(재시도, DLQ 등)를 적용할 수 있는 구조를 염두에 두고, 각 모듈을 느슨하게 결합함.
+- **Event Ingestion**
+	- CloudTrail, S3 이벤트, CloudWatch Alarm/SNS 등 다양한 이벤트 소스가 입력으로 입력됨.
+- **Classification (aws-classifier)**
+	- 이벤트의 핵심 필드(예: IP, 사용자, 이벤트 타입)를 기반으로 위협 여부/유형을 분류함.
+- **Response (aws-responder)**
+	- 위협으로 판정되면 대응 모듈이 실행되어 접근 차단/권한 제한/리소스 격리 같은 조치를 수행함.
+- **Notify & Log**
+	- 운영 가시성을 위해 `aws-notifier`는 알림을 전파하고, `aws-logger`는 공통 포맷으로 로그를 생성함.
+- **Operational Resilience**
+	- 비동기 처리와 실패 재처리(재시도, DLQ 등)를 적용할 수 있는 구조를 염두에 두고, 각 모듈을 느슨하게 결합함.
 
 ## Features / Main Logic
 
